@@ -93,7 +93,7 @@ export default function PublicSite() {
     <main className="site-shell">
       <div className="utility-bar">
         <div className="site-container utility-inner">
-          <p>United Republic of Tanzania</p>
+          <p>Tanzania Commission for Science and Technology (COSTECH)</p>
           <div>
             <a href="mailto:costech40@costech.or.tz">costech40@costech.or.tz</a>
             <span className="utility-dot" />
