@@ -219,7 +219,11 @@ img { display: block; max-width: 100%; }
 
 .site-footer { background: #071f2c; color: #aabcc4; padding-top: 70px; }
 .footer-top { display: grid; grid-template-columns: 1.5fr .7fr .8fr 1fr; gap: 70px; padding-bottom: 58px; }
-.footer-brand img { width: 115px; height: 90px; object-fit: contain; object-position: left center; margin-bottom: 17px; }
+.footer-brand-lockup { display: flex; align-items: center; gap: 14px; margin-bottom: 17px; }
+.footer-brand-lockup img { width: 64px; height: 70px; object-fit: contain; flex: 0 0 auto; }
+.footer-brand-lockup span { display: flex; flex-direction: column; }
+.footer-brand-lockup strong { color: white; font-family: var(--font-display); font-size: 19px; }
+.footer-brand-lockup small { color: #78909a; font-size: 8px; letter-spacing: .13em; text-transform: uppercase; margin-top: 3px; }
 .footer-brand p { max-width: 300px; font-size: 12px; line-height: 1.7; }
 .footer-top h3 { color: white; font-family: var(--font-display); font-size: 16px; margin: 0 0 18px; }
 .footer-top > div:not(.footer-brand) { display: flex; flex-direction: column; gap: 11px; }
@@ -280,7 +284,12 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 520px) {
   .utility-inner div { gap: 10px; }
-  .brand-copy { display: none; }
+  .utility-inner > div:last-child > a:first-child { display: none; }
+  .utility-inner > div:last-child > a[href^="tel"] { font-size: 10px; white-space: nowrap; }
+  .brand { gap: 9px; }
+  .brand img { width: 46px; height: 46px; }
+  .brand-copy strong { font-size: 15px; }
+  .brand-copy small { font-size: 7px; letter-spacing: .11em; }
   .brand-rule { display: none; }
   .hero { height: 640px; }
   .hero-inner { padding-top: 70px; }
@@ -502,7 +511,7 @@ img { display: block; max-width: 100%; }
 .empty-state p { font-size: 9px; }
 
 .admin-login { min-height: 100vh; display: grid; grid-template-columns: 1.1fr .9fr; background: white; }
-.login-art { min-height: 100vh; position: relative; background: url("https://40yrs.costech.or.tz/wp-content/uploads/2026/02/DSC_6315-min-1.jpg") center/cover; display: flex; align-items: flex-end; }
+.login-art { min-height: 100vh; position: relative; background: url("/images/stice-hero-01.jpg") center/cover; display: flex; align-items: flex-end; }
 .login-overlay { position: absolute; inset: 0; background: linear-gradient(10deg, rgba(5,30,42,.97), rgba(8,38,52,.57)); }
 .login-copy { position: relative; color: white; padding: 11vw 9vw; max-width: 780px; }
 .login-copy img { width: 105px; max-height: 90px; object-fit: contain; object-position: left; margin-bottom: 48px; }

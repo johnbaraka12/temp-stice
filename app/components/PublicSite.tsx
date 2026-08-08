@@ -6,19 +6,19 @@ import { fallbackContent, getPublicContent, type SticeContent } from "../lib/sti
 
 const heroSlides = [
   {
-    image: "https://40yrs.costech.or.tz/wp-content/uploads/2026/02/DSC_6315-min.jpg",
+    image: "/images/stice-hero-01.jpg",
     eyebrow: "28–30 October 2026 · Dar es Salaam",
     title: "Four decades of ideas. One bold road ahead.",
     text: "COSTECH@40 brings research, policy, industry and investment together to shape Tanzania's knowledge-driven future.",
   },
   {
-    image: "https://40yrs.costech.or.tz/wp-content/uploads/2026/02/1O1A4091-scaled-1.jpg",
+    image: "/images/stice-hero-02.jpg",
     eyebrow: "Tanzania's national STI platform",
     title: "Where evidence becomes action.",
     text: "Meet the people turning scientific knowledge into scalable solutions for Vision 2050.",
   },
   {
-    image: "https://40yrs.costech.or.tz/wp-content/uploads/2026/02/DSC_6831-min.jpg",
+    image: "/images/stice-hero-03.jpg",
     eyebrow: "Research · Innovation · Enterprise",
     title: "Build the next chapter with us.",
     text: "Share your contribution, explore new partnerships and discover innovations made for Tanzania.",
@@ -47,6 +47,11 @@ const proceedings = [
 function formatMoney(amount?: number, currency = "TZS") {
   if (!amount) return "Contact us";
   return `${currency} ${new Intl.NumberFormat("en-TZ", { maximumFractionDigits: 0 }).format(amount)}`;
+}
+
+function resolveImageUrl(imageUrl: string | undefined, localFallback: string) {
+  if (!imageUrl || imageUrl.includes("40yrs.costech.or.tz/wp-content")) return localFallback;
+  return imageUrl;
 }
 
 function Arrow({ direction = "right" }: { direction?: "left" | "right" }) {
@@ -109,7 +114,7 @@ export default function PublicSite() {
       <header className="main-header">
         <div className="site-container nav-wrap">
           <a href="#top" className="brand" aria-label="COSTECH at 40 home">
-            <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/07/Logo_COSTECH_40.JPG-removebg-preview.png" alt="COSTECH at 40" />
+            <img src="/costech-logo.png" alt="COSTECH logo" />
             <span className="brand-rule" />
             <span className="brand-copy"><strong>COSTECH@40</strong><small>National Summit 2026</small></span>
           </a>
@@ -177,7 +182,7 @@ export default function PublicSite() {
       <section id="about" className="section about-section">
         <div className="site-container about-grid">
           <div className="about-visual reveal-card">
-            <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/02/IMG_1998co.jpg" alt="Scientists and innovators at a COSTECH event" />
+            <img src="/images/stice-about.jpg" alt="COSTECH researchers and innovators in a working session" />
             <div className="about-badge"><strong>40</strong><span>years advancing<br />Tanzania's STI agenda</span></div>
             <div className="photo-caption">Science · Technology · Innovation</div>
           </div>
@@ -235,7 +240,7 @@ export default function PublicSite() {
             </div>
           </div>
           <div className="experience-visual">
-            <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/02/DSC_6831-min-1.jpg" alt="STICE conference participants in discussion" />
+            <img src="/images/stice-experience.jpg" alt="COSTECH stakeholders gathered for a national innovation forum" />
             <div className="experience-quote"><span>“</span><p>Knowledge becomes powerful when it reaches people, policy and production.</p></div>
           </div>
         </div>
@@ -312,7 +317,7 @@ export default function PublicSite() {
       </section>
 
       <section className="venue-section">
-        <div className="venue-image" style={{ backgroundImage: `url(${venue.imageUrl || fallbackContent.venue!.imageUrl})` }} />
+        <div className="venue-image" style={{ backgroundImage: `url(${resolveImageUrl(venue.imageUrl, "/images/stice-venue.jpg")})` }} />
         <div className="venue-overlay" />
         <div className="site-container venue-content">
           <p className="eyebrow light"><span />{venue.title}</p>
@@ -325,7 +330,10 @@ export default function PublicSite() {
       <footer className="site-footer">
         <div className="site-container footer-top">
           <div className="footer-brand">
-            <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/07/COSTECH@40-LOGO-WITH-WHITE-TEXT.png" alt="COSTECH at 40" />
+            <div className="footer-brand-lockup">
+              <img src="/costech-logo.png" alt="COSTECH logo" />
+              <span><strong>COSTECH@40</strong><small>National Summit 2026</small></span>
+            </div>
             <p>From legacy to future: advancing science, technology and innovation for Tanzania's Vision 2050.</p>
           </div>
           <div><h3>Summit</h3><a href="#about">About</a><a href="#themes">Thematic areas</a><a href="#programme">Programme</a><a href="#sponsor">Partnership</a></div>

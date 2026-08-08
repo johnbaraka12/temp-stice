@@ -112,7 +112,7 @@ export const fallbackContent: SticeContent = {
     city: "Dar es Salaam",
     country: "United Republic of Tanzania",
     description: "A landmark national venue in the heart of Dar es Salaam, bringing Tanzania's STI community together.",
-    imageUrl: "https://40yrs.costech.or.tz/wp-content/uploads/2026/02/city-scape.jpg",
+    imageUrl: "/images/stice-venue.jpg",
     mapUrl: "https://maps.google.com/?q=JNICC+Dar+es+Salaam",
     published: true,
     sortOrder: 0,
