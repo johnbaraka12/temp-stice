@@ -109,7 +109,7 @@ export default function PublicSite() {
       <header className="main-header">
         <div className="site-container nav-wrap">
           <a href="#top" className="brand" aria-label="COSTECH at 40 home">
-            <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/07/Logo_COSTECH_40.JPG-removebg-preview.png" alt="COSTECH at 40" />
+            <img src="/costech-logo.png" alt="COSTECH logo" />
             <span className="brand-rule" />
             <span className="brand-copy"><strong>COSTECH@40</strong><small>National Summit 2026</small></span>
           </a>
@@ -325,7 +325,10 @@ export default function PublicSite() {
       <footer className="site-footer">
         <div className="site-container footer-top">
           <div className="footer-brand">
-            <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/07/COSTECH@40-LOGO-WITH-WHITE-TEXT.png" alt="COSTECH at 40" />
+            <div className="footer-brand-lockup">
+              <img src="/costech-logo.png" alt="COSTECH logo" />
+              <span><strong>COSTECH@40</strong><small>National Summit 2026</small></span>
+            </div>
             <p>From legacy to future: advancing science, technology and innovation for Tanzania's Vision 2050.</p>
           </div>
           <div><h3>Summit</h3><a href="#about">About</a><a href="#themes">Thematic areas</a><a href="#programme">Programme</a><a href="#sponsor">Partnership</a></div>

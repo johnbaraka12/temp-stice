@@ -98,7 +98,7 @@ export default function SubmissionForm() {
     <main className="form-page">
       <header className="form-header">
         <Link href="/" className="form-brand">
-          <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/07/Logo_COSTECH_40.JPG-removebg-preview.png" alt="COSTECH at 40" />
+          <img src="/costech-logo.png" alt="COSTECH logo" />
           <span><strong>COSTECH@40</strong><small>Contribution portal</small></span>
         </Link>
         <Link href="/" className="back-link">← Back to summit website</Link>

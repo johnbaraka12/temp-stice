@@ -159,7 +159,7 @@ export default function AdminPortal() {
     <main className="admin-shell">
       <aside className={mobileNav ? "admin-sidebar open" : "admin-sidebar"}>
         <div className="admin-brand">
-          <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/07/COSTECH@40-LOGO-WITH-WHITE-TEXT.png" alt="COSTECH at 40" />
+          <img src="/costech-logo.png" alt="COSTECH logo" />
           <span><strong>STICE</strong><small>Content administration</small></span>
         </div>
         <nav>{nav.map((item) => <button key={item.id} className={tab === item.id ? "active" : ""} onClick={() => { setTab(item.id); setMobileNav(false); }}><span>{item.mark}</span>{item.label}{item.id === "submissions" && submissions.length > 0 && <b>{submissions.length}</b>}</button>)}</nav>
@@ -206,7 +206,7 @@ function AdminLogin({ onLogin, error }: { onLogin: (event: FormEvent<HTMLFormEle
       <section className="login-art">
         <div className="login-overlay" />
         <div className="login-copy">
-          <img src="https://40yrs.costech.or.tz/wp-content/uploads/2026/07/COSTECH@40-LOGO-WITH-WHITE-TEXT.png" alt="COSTECH at 40" />
+          <img src="/costech-logo.png" alt="COSTECH logo" />
           <p className="eyebrow light"><span />Summit content system</p>
           <h1>Shape what the nation sees.</h1>
           <p>Manage the COSTECH@40 public experience, contributions, thematic focus and partnership opportunities.</p>
