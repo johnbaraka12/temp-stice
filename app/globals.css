@@ -511,7 +511,7 @@ img { display: block; max-width: 100%; }
 .empty-state p { font-size: 9px; }
 
 .admin-login { min-height: 100vh; display: grid; grid-template-columns: 1.1fr .9fr; background: white; }
-.login-art { min-height: 100vh; position: relative; background: url("/images/stice-hero-01.jpg") center/cover; display: flex; align-items: flex-end; }
+.login-art { min-height: 100vh; position: relative; background: url("/images/stice-update-exhibition.jpeg") center/cover; display: flex; align-items: flex-end; }
 .login-overlay { position: absolute; inset: 0; background: linear-gradient(10deg, rgba(5,30,42,.97), rgba(8,38,52,.57)); }
 .login-copy { position: relative; color: white; padding: 11vw 9vw; max-width: 780px; }
 .login-copy img { width: 105px; max-height: 90px; object-fit: contain; object-position: left; margin-bottom: 48px; }
