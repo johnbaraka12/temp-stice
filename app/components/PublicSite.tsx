@@ -6,19 +6,19 @@ import { fallbackContent, getPublicContent, type SticeContent } from "../lib/sti
 
 const heroSlides = [
   {
-    image: "/images/stice-hero-01.jpg",
+    image: "/images/stice-update-forum.jpeg",
     eyebrow: "28–30 October 2026 · Dar es Salaam",
     title: "Four decades of ideas. One bold road ahead.",
     text: "COSTECH@40 brings research, policy, industry and investment together to shape Tanzania's knowledge-driven future.",
   },
   {
-    image: "/images/stice-hero-02.jpg",
+    image: "/images/stice-update-speaker.jpeg",
     eyebrow: "Tanzania's national STI platform",
     title: "Where evidence becomes action.",
     text: "Meet the people turning scientific knowledge into scalable solutions for Vision 2050.",
   },
   {
-    image: "/images/stice-hero-03.jpg",
+    image: "/images/stice-update-exhibition.jpeg",
     eyebrow: "Research · Innovation · Enterprise",
     title: "Build the next chapter with us.",
     text: "Share your contribution, explore new partnerships and discover innovations made for Tanzania.",
@@ -47,11 +47,6 @@ const proceedings = [
 function formatMoney(amount?: number, currency = "TZS") {
   if (!amount) return "Contact us";
   return `${currency} ${new Intl.NumberFormat("en-TZ", { maximumFractionDigits: 0 }).format(amount)}`;
-}
-
-function resolveImageUrl(imageUrl: string | undefined, localFallback: string) {
-  if (!imageUrl || imageUrl.includes("40yrs.costech.or.tz/wp-content")) return localFallback;
-  return imageUrl;
 }
 
 function Arrow({ direction = "right" }: { direction?: "left" | "right" }) {
@@ -182,7 +177,7 @@ export default function PublicSite() {
       <section id="about" className="section about-section">
         <div className="site-container about-grid">
           <div className="about-visual reveal-card">
-            <img src="/images/stice-about.jpg" alt="COSTECH researchers and innovators in a working session" />
+            <img src="/images/stice-update-exhibition.jpeg" alt="COSTECH leaders visiting an innovation exhibition" />
             <div className="about-badge"><strong>40</strong><span>years advancing<br />Tanzania's STI agenda</span></div>
             <div className="photo-caption">Science · Technology · Innovation</div>
           </div>
@@ -240,7 +235,7 @@ export default function PublicSite() {
             </div>
           </div>
           <div className="experience-visual">
-            <img src="/images/stice-experience.jpg" alt="COSTECH stakeholders gathered for a national innovation forum" />
+            <img src="/images/stice-update-speaker.jpeg" alt="A participant speaking during a national innovation forum" />
             <div className="experience-quote"><span>“</span><p>Knowledge becomes powerful when it reaches people, policy and production.</p></div>
           </div>
         </div>
@@ -317,7 +312,7 @@ export default function PublicSite() {
       </section>
 
       <section className="venue-section">
-        <div className="venue-image" style={{ backgroundImage: `url(${resolveImageUrl(venue.imageUrl, "/images/stice-venue.jpg")})` }} />
+        <div className="venue-image" style={{ backgroundImage: "url(/images/stice-update-forum.jpeg)" }} />
         <div className="venue-overlay" />
         <div className="site-container venue-content">
           <p className="eyebrow light"><span />{venue.title}</p>
