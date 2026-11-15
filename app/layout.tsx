@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "COSTECH@40 Summit",
     title: "COSTECH@40 Summit — From Legacy to Future",
-    description: "28–30 October 2026 · JNICC, Dar es Salaam",
+    description: "17–18 November 2026 · Mlimani City Conference Centre, Dar es Salaam",
     images: [{ url: "/og.png", width: 1730, height: 909, alt: "COSTECH@40 Summit — From Legacy to Future" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "COSTECH@40 Summit — From Legacy to Future",
-    description: "28–30 October 2026 · JNICC, Dar es Salaam",
+    description: "17–18 November 2026 · Mlimani City Conference Centre, Dar es Salaam",
     images: ["/og.png"],
   },
 };

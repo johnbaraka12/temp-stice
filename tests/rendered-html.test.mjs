@@ -23,7 +23,9 @@ test("server-renders the COSTECH@40 summit experience", async () => {
   assert.match(html, /COSTECH@40 Summit/);
   assert.match(html, /Four decades of ideas/);
   assert.match(html, /Thematic areas/);
-  assert.match(html, /Submit your contribution/);
+  assert.match(html, /17–18 November 2026/);
+  assert.match(html, /Mlimani City/);
+  assert.match(html, /Official programme/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
