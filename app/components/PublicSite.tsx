@@ -38,6 +38,25 @@ const dayOneSchedule = [
   ["TBA", "Media Awards"],
 ];
 
+const panelActivities = [
+  {
+    title: "Science for Tanzania's Prosperity",
+    summary: "How science, research and national capabilities can advance inclusive prosperity across Tanzania.",
+  },
+  {
+    title: "Tanzania's Interests in Global Science",
+    summary: "Positioning national priorities, partnerships and representation within the global science ecosystem.",
+  },
+  {
+    title: "National Evidence for National Progress",
+    summary: "Strengthening national decisions through coordinated research, trusted data and actionable evidence.",
+  },
+  {
+    title: "Innovation for Industrial Growth and Jobs",
+    summary: "Turning ideas and technology into productive industries, competitive enterprises and quality employment.",
+  },
+];
+
 const dayTwoHighlights = [
   "Guest arrivals and the science, technology and innovation exhibition",
   "COSTECH's 40-year report and stakeholder recommendations towards Vision 2050",
@@ -87,7 +106,6 @@ export default function PublicSite() {
   }, [paused]);
 
   const current = heroSlides[slide];
-  const areas = useMemo(() => [...content.thematicAreas].sort((a, b) => a.sortOrder - b.sortOrder), [content.thematicAreas]);
   const sponsors = useMemo(() => [...content.sponsorshipPackages].sort((a, b) => Number(b.featured) - Number(a.featured) || a.sortOrder - b.sortOrder), [content.sponsorshipPackages]);
   const theme = content.mainTheme || fallbackContent.mainTheme!;
 
@@ -135,7 +153,7 @@ export default function PublicSite() {
       </section>
 
       <section id="themes" className="section themes-section">
-        <div className="site-container"><div className="section-heading split-heading"><div><p className="eyebrow light"><span />Four pathways to transformation</p><h2>Thematic areas</h2></div><p>The programme follows the systems that will define Tanzania's competitive, resilient and knowledge-led future.</p></div><div className="theme-grid">{areas.map((area, index) => <article className="theme-card" key={area.id || area.title}><div className="theme-number">{area.icon?.match(/^\d/) ? area.icon : `0${index + 1}`}</div><h3>{area.title}</h3><p>{area.summary || area.description}</p><div className="theme-card-foot"><span>Summit focus</span><Arrow /></div></article>)}</div></div>
+        <div className="site-container"><div className="section-heading split-heading"><div><p className="eyebrow light"><span />Day One · Four national conversations</p><h2>Panel activity themes</h2></div><p>The four official panel activities move from national prosperity and global science to evidence-led progress, industrial growth and jobs.</p></div><div className="theme-grid">{panelActivities.map((panel, index) => <article className="theme-card" key={panel.title}><div className="theme-number">{`0${index + 1}`}</div><h3>{panel.title}</h3><p>{panel.summary}</p><div className="theme-card-foot"><span>Day One panel</span><Arrow /></div></article>)}</div></div>
       </section>
 
       <section id="programme" className="section programme-section">

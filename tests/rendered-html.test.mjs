@@ -22,7 +22,9 @@ test("server-renders the COSTECH@40 summit experience", async () => {
   const html = await response.text();
   assert.match(html, /COSTECH@40 Summit/);
   assert.match(html, /Four decades of ideas/);
-  assert.match(html, /Thematic areas/);
+  assert.match(html, /Panel activity themes/);
+  assert.match(html, /Science for Tanzania&#x27;s Prosperity/);
+  assert.match(html, /Innovation for Industrial Growth and Jobs/);
   assert.match(html, /17–18 November 2026/);
   assert.match(html, /Mlimani City/);
   assert.match(html, /Official programme/);
