@@ -28,7 +28,7 @@ const heroSlides = [
 ];
 
 const dayOneSchedule = [
-  ["07:30", "Arrival, registration and refreshments"],
+  ["07:30", "Arrival and registration"],
   ["08:30", "Welcome remarks and summit objectives"],
   ["08:45", "Panel 1 — Science for Tanzania's Prosperity"],
   ["10:30", "Panel 2 — Tanzania's Interests in Global Science"],
@@ -58,12 +58,13 @@ const panelActivities = [
 ];
 
 const dayTwoHighlights = [
-  "Guest arrivals and the science, technology and innovation exhibition",
+  "Guest arrivals, registration, breakfast and entertainment",
+  "Guest of Honour tours the science, technology and innovation exhibition",
   "COSTECH's 40-year report and stakeholder recommendations towards Vision 2050",
-  "Ministerial remarks and the Guest of Honour address",
+  "Zanzibar Government remarks and the Minister's welcome to the Guest of Honour",
   "Launch of the preliminary National Research Coordination Report",
-  "STI leadership awards, group photo and closing ceremony",
-  "Lunch, exhibition, networking, investment and partnership conversations",
+  "STI leadership awards followed by the Guest of Honour address",
+  "Group photos, lunch, exhibition and investment and market networking",
 ];
 
 const mediaStories = [
@@ -158,7 +159,7 @@ export default function PublicSite() {
 
       <section id="programme" className="section programme-section">
         <div className="site-container">
-          <div className="section-heading split-heading dark-copy programme-heading"><div><p className="eyebrow"><span />Official public programme</p><h2>Two days built for action.</h2></div><div className="programme-intro"><p>Dialogue, evidence, innovation and national leadership come together across a focused two-day programme.</p><a href={programmeUrl} target="_blank" rel="noreferrer" className="text-link">Download the full programme <Arrow /></a></div></div>
+          <div className="section-heading split-heading dark-copy programme-heading"><div><p className="eyebrow"><span />Official public programme</p><h2>Two days built for action.</h2></div><div className="programme-intro"><p>Dialogue, evidence, innovation and national leadership come together across a focused two-day programme.</p><span className="programme-version">Updated 15 November 2026 · 5 pages</span><a href={programmeUrl} target="_blank" rel="noreferrer" className="text-link">Download the updated programme <Arrow /></a></div></div>
           <div className="schedule-grid">
             <article className="schedule-card schedule-card-primary"><div className="schedule-day"><span>Day 01</span><p><strong>Tuesday</strong><small>17 November 2026</small></p></div><div className="schedule-timeline">{dayOneSchedule.map(([time, title]) => <div key={`${time}-${title}`}><time>{time}</time><p>{title}</p></div>)}</div></article>
             <article className="schedule-card schedule-card-secondary"><div className="schedule-day"><span>Day 02</span><p><strong>Wednesday</strong><small>18 November 2026</small></p></div><div className="guest-note"><small>Guest of Honour</small><strong>Hon. Dr. Mwigulu Lameck Nchemba</strong><span>Prime Minister of the United Republic of Tanzania</span></div><ol className="day-two-list">{dayTwoHighlights.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>)}</ol></article>
