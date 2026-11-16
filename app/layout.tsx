@@ -20,8 +20,9 @@ export const metadata: Metadata = {
   },
   description: "From Legacy to Future: COSTECH@40 and the road towards Tanzania Vision 2050.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "64x64" }],
+    shortcut: "/favicon.png",
+    apple: "/costech-logo.png",
   },
   openGraph: {
     type: "website",
